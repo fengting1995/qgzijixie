@@ -13,10 +13,8 @@ public class ReturnResultUtils {
         returnResult.setCode(0);
         return returnResult;
     }
-
-
         /*
-         * 成功，带数据，附静态方法的参数不能用类上的泛型作为参数，原本这边是T data用不了。
+         * 成功，带数据，附静态方法的参数不能用泛型作为参数，原本这边是T data用不了。
          * */
     public static ReturnResult returnSuccess(Object data){
         ReturnResult returnResult = new ReturnResult();
@@ -24,8 +22,6 @@ public class ReturnResultUtils {
         returnResult.setData(data);
         return returnResult;
     }
-
-
         /*
          * 失败，则返回失败信息
          * */
@@ -35,6 +31,5 @@ public class ReturnResultUtils {
         returnResult.setMessage(message);
         return returnResult;
     }
-
 
 }
