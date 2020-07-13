@@ -30,4 +30,5 @@ public class QgUserServiceImpl implements QgUserService {
         param.put("password",password);
         return qgUserMapper.getQgUserByPhoneAndPwd(param);
     }
+
 }
