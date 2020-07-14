@@ -9,5 +9,6 @@ public interface LocalUserService {
 
     public ReturnResult validateToken(String Phone,String password)throws Exception;
 
+    public ReturnResult removeToken(String token)throws Exception;
 
 }

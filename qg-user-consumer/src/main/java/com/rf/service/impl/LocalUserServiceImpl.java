@@ -1,6 +1,7 @@
 package com.rf.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.alibaba.fastjson.JSONObject;
 import com.rf.common.Constants;
 import com.rf.dto.ReturnResult;
 import com.rf.dto.ReturnResultUtils;
@@ -45,9 +46,10 @@ public class LocalUserServiceImpl implements LocalUserService {
                 redisUtils.delStr(qgUser.getId());
             }
             String token = Constants.tokenPrefix+ TokenUtils.createToken(qgUser.getId(),qgUser.getPhone());
+            redisUtils.setStr(token, JSONObject.toJSONString(qgUser),Constants.LOGIN_EXPIRE);
+            //还有存token对应用户id，将来客户端发过来token时才能找到这个token是对应哪个用户，但是为什么要转成json字符串是个问题
             redisUtils.setStr(qgUser.getId(),token,Constants.LOGIN_EXPIRE);
             //这边常量为30L，即长整型，在redisutil中注明了该参数为时间，且单位为分钟，所以直接用常数。
-
             Map<String,String>result = new HashMap<String, String>();
             result.put("token",token);
             returnResult =  ReturnResultUtils.returnSuccess(result);
@@ -59,6 +61,14 @@ public class LocalUserServiceImpl implements LocalUserService {
         return returnResult;
     }
 
+    @Override
+    public ReturnResult removeToken(String token) throws Exception {
+        String qgUserJson = redisUtils.getStr(token);
+        QgUser qgUser = JSONObject.parseObject(qgUserJson,QgUser.class);
+        redisUtils.delStr(token);
+        redisUtils.delStr(qgUser.getId());
+        return ReturnResultUtils.returnSuccess();
+    }
 
 
 }

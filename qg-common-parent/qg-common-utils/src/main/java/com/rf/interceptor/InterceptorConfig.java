@@ -13,10 +13,14 @@ public class InterceptorConfig extends WebMvcConfigurerAdapter {
         return new ExceptionInterceptor();
     }
 
+    @Bean
+    public LoginInterceptor loginInterceptor(){return  new LoginInterceptor();}
+
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(exceptionInterceptor()).addPathPatterns("/api/**");
+        registry.addInterceptor(loginInterceptor()).addPathPatterns("/api/v/**");
         super.addInterceptors(registry);
     }
 }

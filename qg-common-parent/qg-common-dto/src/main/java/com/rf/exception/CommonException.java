@@ -4,7 +4,8 @@ package com.rf.exception;
 public enum CommonException{
 
     SYSTEM_EXCEPTION(-1,"系统繁忙,请稍后重试"),
-    USER_NO_LOGIN(1,"用户登录超时");
+    USER_NO_LOGIN(1,"用户未登录"),
+    USER_LOGIN_TIMEOUT_EXCEPTION(2,"用户登录已过时");
 
     private Integer code;
 
