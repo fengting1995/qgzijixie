@@ -14,6 +14,8 @@ public class EmptyUtils {
     public static boolean isEmpty(Object obj){
         if (obj == null)
             return true;
+
+        //下面的是在判断new了容器，但容器为空的情况。
         if (obj instanceof CharSequence)
             return ((CharSequence) obj).length() == 0;
         if (obj instanceof Collection)

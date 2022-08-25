@@ -3,8 +3,7 @@ package com.rf.utils;
 import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 
 
 //这边的printutil是自己定义了一个response，调用了这个prinutil实际上就是在改response的内容
@@ -22,11 +21,12 @@ public class PrintUtil {
 		this.response=response;
 	}
 	public void print(Object msg){
-        PrintWriter writer=null;
+
+		PrintWriter writer=null;
 		try {
             if(null != response){
 				//如果系统打开了outputStream 那么将其关闭
-                writer=new PrintWriter(response.getOutputStream());
+				writer =new PrintWriter(new OutputStreamWriter(response.getOutputStream(),"utf-8"));
 				String temp=new String(String.valueOf(msg));
                 writer.write(temp);
                 writer.flush();
@@ -34,7 +34,8 @@ public class PrintUtil {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}finally {
-				writer.close();
+			writer.close();
 		}
     }
+
 }

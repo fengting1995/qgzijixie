@@ -14,7 +14,6 @@ import com.rf.utils.RedisUtils;
 import com.rf.utils.TokenUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,18 +28,12 @@ public class LocalUserServiceImpl implements LocalUserService {
 
 
     @Override
-    public QgUser testXiangmuDajianDemo() throws Exception {
-        String id ="2";
-        return qgUserService.getQgUserById(id);
-    }
-
-    @Override
     public ReturnResult validateToken(String Phone, String password) throws Exception {
         QgUser qgUser = null;
+
         ReturnResult returnResult = null;
         qgUser = qgUserService.getQgUserByPhoneAndPwd(Phone, password);
         if(qgUser!=null){
-
             String oldToken = redisUtils.getStr(qgUser.getId());
             if (EmptyUtils.isNotEmpty(oldToken)){
                 redisUtils.delStr(qgUser.getId());
@@ -62,7 +55,7 @@ public class LocalUserServiceImpl implements LocalUserService {
     }
 
     @Override
-    public ReturnResult removeToken(String token) throws Exception {
+    public ReturnResult removeToken(String token) throws Exception{
         String qgUserJson = redisUtils.getStr(token);
         QgUser qgUser = JSONObject.parseObject(qgUserJson,QgUser.class);
         redisUtils.delStr(token);

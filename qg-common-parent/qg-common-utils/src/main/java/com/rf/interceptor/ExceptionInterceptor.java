@@ -29,7 +29,7 @@ public class ExceptionInterceptor implements HandlerInterceptor {
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
 
         if(EmptyUtils.isNotEmpty(ex)){
-            response.setContentType("text/html;charset=GBK");
+            response.setContentType("text/html;charset=utf-8");
             PrintUtil printUtil=new PrintUtil(response);
             ReturnResult returnResult=ReturnResultUtils.returnFail(CommonException.SYSTEM_EXCEPTION.getCode(),CommonException.SYSTEM_EXCEPTION.getMessage());
             printUtil.print(JSONObject.toJSON(returnResult));//response改成输出为自定义错误类型，原本是一大堆的那种详细错误。

@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/qg-user-provider/pom.xml" />
         <option value="$PROJECT_DIR$/qg-user-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/qg-common-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/qg-pre/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

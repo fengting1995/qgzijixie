@@ -1,6 +1,5 @@
 package com.rf.interceptor;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.rf.dto.ReturnResult;
 import com.rf.dto.ReturnResultUtils;
@@ -8,7 +7,6 @@ import com.rf.exception.CommonException;
 import com.rf.utils.EmptyUtils;
 import com.rf.utils.PrintUtil;
 import com.rf.utils.RedisUtils;
-import org.omg.CORBA.UserException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -39,7 +37,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         }
 
         if(EmptyUtils.isNotEmpty(returnResult)){
-            response.setContentType("text/html;charset=GBK");
+            response.setContentType("text/html;charset=utf-8");//告诉浏览器response的内容，以及要以什么方式解码
             printUtil = new PrintUtil(response);
             printUtil.print(JSONObject.toJSON(returnResult));
             return false;

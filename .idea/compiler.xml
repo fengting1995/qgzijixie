@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="qg-common-utils" />
         <module name="qg-common-service" />
+        <module name="qg-pre" />
         <module name="qg-user-consumer" />
         <module name="qg-common-module" />
         <module name="qg-common-dto" />
@@ -26,8 +27,9 @@
       <module name="demo" options="-parameters" />
       <module name="demo11" options="-parameters" />
       <module name="qg-common-utils" options="-parameters" />
-      <module name="qg-user-consumer" options="-parameters" />
-      <module name="qg-user-provider" options="-parameters" />
+      <module name="qg-pre" options="-parameters" />
+      <module name="qg-user-consumer" options="" />
+      <module name="qg-user-provider" options="" />
     </option>
   </component>
 </project>

@@ -1,2 +1,3 @@
 com\rf\interceptor\LoginInterceptor.class
+com\rf\utils\PrintUtil.class
 com\rf\interceptor\ExceptionInterceptor.class

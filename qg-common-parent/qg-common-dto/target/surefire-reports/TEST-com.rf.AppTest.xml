@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="com.rf.AppTest" time="0.002" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="com.rf.AppTest" time="0.003" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_181\jre\bin"/>
     <property name="java.vm.version" value="25.181-b13"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="D:\java program\qgzijixie"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\java program\qgzijixie\qg-common-parent"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="D:\java program\qgzijixie"/>
+    <property name="user.dir" value="D:\java program\qgzijixie\qg-common-parent"/>
     <property name="java.runtime.version" value="1.8.0_181-b13"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\endorsed"/>
@@ -30,7 +30,7 @@
     <property name="maven.ext.class.path" value="D:\IntelliJ IDEA\IntelliJ IDEA 2019.2\plugins\maven\lib\maven-event-listener.jar"/>
     <property name="classworlds.conf" value="D:\java\apache-maven-3.5.2\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="GBK"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\IntelliJ IDEA\IntelliJ IDEA 2019.2\jbr\\bin;D:\IntelliJ IDEA\IntelliJ IDEA 2019.2\jbr\\bin\server;D:\program\xftp\xftp\;D:\program\xshell\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\System32;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\mysql\mysql5.7\bin;D:\mysql\mysql-5.7.27-winx64\bin;D:\java\apache-maven-3.5.2\bin;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;D:\program\tomcat\apache-tomcat-8.5.31\bin;D:\program\nodejs\;D:\program\nodejs\node_global;D:\python\Scripts\;D:\python\;C:\Users\18148\AppData\Local\Microsoft\WindowsApps;D:\vscode\Microsoft VS Code\bin;D:\pycharm\PyCharm 2019.1.3\bin;;D:\IntelliJ IDEA\IntelliJ IDEA 2019.1.3\bin;;C:\Users\18148\AppData\Roaming\npm;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_181\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\IntelliJ IDEA\IntelliJ IDEA 2019.2\jbr\\bin;D:\IntelliJ IDEA\IntelliJ IDEA 2019.2\jbr\\bin\server;D:\program\xftp\xftp\;D:\program\xshell\;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\System32;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\mysql\mysql5.7\bin;D:\mysql\mysql-5.7.27-winx64\bin;D:\java\apache-maven-3.5.2\bin;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;D:\program\tomcat\apache-tomcat-8.5.31\bin;D:\program\nodejs\;D:\program\nodejs\node_global;;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\python\Scripts\;D:\python\;C:\Users\18148\AppData\Local\Microsoft\WindowsApps;D:\vscode\Microsoft VS Code\bin;D:\pycharm\PyCharm 2019.1.3\bin;;D:\IntelliJ IDEA\IntelliJ IDEA 2019.1.3\bin;;C:\Users\18148\AppData\Roaming\npm;C:\Users\18148\AppData\Local\Temp\Astcenc;;."/>
     <property name="maven.conf" value="D:\java\apache-maven-3.5.2/conf"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
@@ -38,7 +38,7 @@
     <property name="maven.repo.local" value="D:\program\maven\repository_boot"/>
     <property name="os.version" value="10.0"/>
     <property name="user.home" value="C:\Users\18148"/>
-    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="user.timezone" value="Asia/Taipei"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="GB2312"/>
@@ -65,5 +65,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.rf.AppTest" name="shouldAnswerWithTrue" time="0.002"/>
+  <testcase classname="com.rf.AppTest" name="shouldAnswerWithTrue" time="0.003"/>
 </testsuite>

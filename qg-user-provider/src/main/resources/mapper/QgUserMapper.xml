@@ -3,6 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rf.mapper.QgUserMapper">
+
     <select id="getQgUserById" resultType="com.rf.pojo.QgUser">
         select
                 id as id,

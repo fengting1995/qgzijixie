@@ -11,7 +11,7 @@ public enum CommonException{
 
     private String message;
 
-    CommonException(Integer code, String message) {
+    CommonException(Integer code, String message){
         this.code = code;
         this.message = message;
     }
